@@ -1,0 +1,108 @@
+:root {
+    --backgroundBlue: rgb(45,49,68);
+    --boxColor: rgb(217,217,217);
+}
+
+.screen {
+    width: 100%;
+    height: 1010px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#text {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    color: var(--backgroundBlue);
+    font-size: 250px;
+    
+}
+
+#first {
+    background: url("../images/Aviela.JPG") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+#second {
+    background-color: var(--boxColor);
+}
+
+#third {
+    border-top: 2px white solid;
+    background-color: var(--backgroundBlue);
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33.333333333% 33.333333333% 33.333333333%
+}
+
+.grid-item {
+    border-top: 30px;
+    border-bottom: 30px;
+    border-right: 30px;
+    border-left: 30px;
+    border-color: var(--backgroundBlue);
+    border-style: solid;
+}
+
+#one {
+    border-top: 60px;
+    border-left: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#two {
+    border-top: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#three {
+    border-top: 60px;
+    border-right: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#four {
+    border-left: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#six {
+    border-right: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#seven {
+    border-left: 60px;
+    border-bottom: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#eight {
+    border-bottom: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
+
+#nine {
+    border-bottom: 60px;
+    border-right: 60px;
+    border-style: solid;
+    border-color: var(--backgroundBlue);
+}
