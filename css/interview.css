@@ -5,7 +5,54 @@
 
 .screen {
     width: 100%;
-    height: 1010px;
+    height: 900px;
+}
+
+section {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    line-height: 30px;
+}
+nav {
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--backgroundBlue);
+    color: var(--boxColor);
+    border-bottom: var(--boxColor) 1px solid;
+    z-index: 10;
+}
+
+.navLink {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+}
+
+a { 
+    color: var(--boxColor); 
+}
+
+a:visited { 
+    color: var(--boxColor); 
+}
+
+.a {
+    padding-top: 20px;
+}
+
+.list {
+    display: inline-block;
+}
+
+.qna {
+    font-size: 130%;
 }
 
 * {
@@ -31,11 +78,13 @@
 }
 
 #second {
+    border-top: 2px var(--boxColor) solid;
     background-color: var(--boxColor);
 }
 
 #third {
-    border-top: 2px white solid;
+    border-top: 2px var(--boxColor) solid;
+    border-bottom: 2px var(--boxColor) solid;
     background-color: var(--backgroundBlue);
 }
 
@@ -43,7 +92,8 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 33.333333333% 33.333333333% 33.333333333%
+    grid-template-columns: 33.333333333% 33.333333333% 33.333333333%;
+    grid-template-rows: 1fr .93fr 1fr;
 }
 
 .grid-item {
