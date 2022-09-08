@@ -117,7 +117,6 @@ ipch/
 *.vsp
 *.vspx
 *.sap
-*.DS_Store
 
 # Visual Studio Trace Files
 *.e2e
@@ -397,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.DS_Store
