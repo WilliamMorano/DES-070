@@ -14,33 +14,158 @@ section {
     text-align: center;
     line-height: 30px;
 }
+
+.long {
+    position: relative;
+    top: 90px;
+    text-align:left;
+    line-height: 40px;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: var(--boxColor);
+    color: var(--backgroundBlue);
+    font-size: 30px;
+}
+
+.foot {
+    position: relative;
+    top: 17px;
+    line-height: 38px;
+}
+
+#inter1 {
+    position: relative;
+    left: 20%;
+}
+
+#inter2 {
+    position: relative;
+    right: 20%;
+}
+
 nav {
     position: sticky;
     justify-content: center;
     align-items: center;
     display: flex;
-    position: sticky;
     top: 0px;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: var(--backgroundBlue);
-    color: var(--boxColor);
     border-bottom: var(--boxColor) 1px solid;
     z-index: 10;
 }
 
 .navLink {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: large;
+    align-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: inline-block;
+    background-color: var(--boxColor);
+    width: 170px;
+    height: 35px;
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.long {
+    color: var(--boxColor);
+    font-size: 30px;
+}
+
+.grid-container2 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-item2 {
+    border: 100px var(--backgroundBlue) solid;
+}
+
+#one.two {
+    border-left: 100px;
+    border-right: 50px;
+}
+
+#two.two {
+    border-right: 50px;
+    border-left: 100px;
+}
+
+.icon {
+    position: absolute;
+    display: inline;
+    width: 70px;
+    height: 70px;
+}
+
+#graph {
+    top:-17px;
+    left:7px;
+}
+
+#onePillow {
+    top: 120px;
+    left: 430px;
+}
+
+#twoPillows {
+    top: -17px;
+    left: 7px;
+}
+
+#allergy {
+    top: 120px;
+    left: 430px;
+}
+
+#sky {
+    top: 120px;
+    left: 430px;
+}
+
+#karaoke {
+    top: -17px;
+    left: 7px;
+}
+
+#tire {
+    top: -17px;
+    left: 7px;
+}
+
+#arrow {
+    top: -17px;
+    left: 7px;
+}
+
+#patience {
+    top: 110px;
+    left: 440px;
+}
+
+#empathy {
+    top: 120px;
+    left: 430px;
 }
 
 a { 
-    color: var(--boxColor); 
+    color: var(--backgroundBlue); 
 }
 
 a:visited { 
-    color: var(--boxColor); 
+    color: var(--backgroundBlue); 
 }
 
 .a {
