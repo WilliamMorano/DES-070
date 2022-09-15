@@ -16,6 +16,11 @@ section {
     line-height: 30px;
 }
 
+.sec {
+    position: relative;
+    top: 22%;
+}
+
 .bolder {
     font-family: 'Abril Fatface', cursive;
 }
@@ -132,52 +137,52 @@ nav {
 }
 
 #graph {
-    top:-17px;
+    top:-60px;
     left:7px;
 }
 
 #onePillow {
-    top: 120px;
+    top: 130%;
     left: 80%;
 }
 
 #twoPillows {
-    top: -17px;
+    top: -60px;
     left: 7px;
 }
 
 #allergy {
-    top: 120px;
+    top: 130%;
     left: 80%;
 }
 
 #sky {
-    top: 120px;
+    top: 103%;
     left: 80%;
 }
 
 #karaoke {
-    top: -17px;
+    top: -60px;
     left: 7px;
 }
 
 #tire {
-    top: -17px;
+    top: -60px;
     left: 7px;
 }
 
 #arrow {
-    top: -17px;
+    top: -60px;
     left: 7px;
 }
 
 #patience {
-    top: 110px;
+    top: 130%;
     left: 80%;
 }
 
 #empathy {
-    top: 120px;
+    top: 130%;
     left: 80%;
 }
 
@@ -209,12 +214,14 @@ a:visited {
 
 #text {
     height: 260px;
+    width: 700px;
     background-color: rgba(217, 217, 217, .7);;
     font-family: 'Combo', cursive;
     text-align: center;
-    position: absolute;
-    left: 35%;
-    top: 65%;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    margin-left: -350px;
     color: var(--backgroundBlue);
     font-size: 250px;
     
@@ -304,4 +311,10 @@ a:visited {
     border-right: 60px;
     border-style: solid;
     border-color: var(--backgroundBlue);
+}
+
+@media (max-height: 1400px) {
+    .screen {
+        height: 1200px;
+    }
 }
