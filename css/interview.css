@@ -37,7 +37,7 @@ section {
 
 footer {
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-color: var(--boxColor);
     color: var(--backgroundBlue);
     font-size: 30px;
@@ -57,6 +57,11 @@ footer {
     line-height: 38px;
 }
 
+.inter {
+    font-size: 25px;
+    padding-top: 30px;
+}
+
 #inter1 {
     position: relative;
     left: 30%;
@@ -74,21 +79,21 @@ nav {
     display: flex;
     top: 0px;
     width: 100%;
-    height: 50px;
-    background-color: var(--backgroundBlue);
-    border-bottom: var(--boxColor) 1px solid;
+    height: 70px;
+    background-color: #38456C;
     z-index: 10;
     font-family: 'Playfair Display', serif;
 }
 
 .navLink {
     padding-top: 8px;
+    padding-bottom: 8px;
     align-content: center;
     margin-left: 30px;
     margin-right: 30px;
     display: inline-block;
     background-color: var(--boxColor);
-    width: 170px;
+    width: 190px;
     height: 35px;
 }
 
@@ -137,52 +142,52 @@ nav {
 }
 
 #graph {
-    top:-60px;
+    top:-15px;
     left:7px;
 }
 
 #onePillow {
-    top: 130%;
+    top: 90%;
     left: 80%;
 }
 
 #twoPillows {
-    top: -60px;
+    top: -15px;
     left: 7px;
 }
 
 #allergy {
-    top: 130%;
+    top: 90%;
     left: 80%;
 }
 
 #sky {
-    top: 103%;
+    top: 72%;
     left: 80%;
 }
 
 #karaoke {
-    top: -60px;
+    top: -15px;
     left: 7px;
 }
 
 #tire {
-    top: -60px;
+    top: -15px;
     left: 7px;
 }
 
 #arrow {
-    top: -60px;
+    top:-15px;
     left: 7px;
 }
 
 #patience {
-    top: 130%;
+    top: 90%;
     left: 80%;
 }
 
 #empathy {
-    top: 130%;
+    top: 90%;
     left: 80%;
 }
 
@@ -234,7 +239,6 @@ a:visited {
 }
 
 #second {
-    border-top: 2px var(--boxColor) solid;
     background-color: var(--boxColor);
 }
 
@@ -313,8 +317,93 @@ a:visited {
     border-color: var(--backgroundBlue);
 }
 
-@media (max-height: 1400px) {
+@media (min-height: 1300px) {
+    #graph {
+        top: -60px;
+        left: 7px;
+        }
+
+    #onePillow {
+        top: 130%;
+        left: 80%;
+    }
+
+    #twoPillows {
+        top: -60px;
+        left: 7px;
+    }
+
+    #allergy {
+        top: 130%;
+        left: 80%;
+    }
+
+    #sky {
+        top: 103%;
+        left: 80%;
+    }
+
+    #karaoke {
+        top: -60px;
+        left: 7px;
+    }
+
+    #tire {
+        top: -60px;
+        left: 7px;
+    }
+
+    #arrow {
+        top: -60px;
+        left: 7px;
+    }
+
+    #patience {
+        top: 130%;
+        left: 80%;
+    }
+
+    #empathy {
+        top: 130%;
+        left: 80%;
+    }
     .screen {
         height: 1200px;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    #onePillow {
+        top: 130%;
+        left: 70%;
+    }
+
+    #allergy {
+        top: 130%;
+        left: 70%;
+    }
+
+    #sky {
+        top: 103%;
+        left: 70%;
+    }
+
+    #patience {
+        top: 130%;
+        left: 70%;
+    }
+
+    #empathy {
+        top: 130%;
+        left: 70%;
+    }
+}
+
+@media (max-width: 940px) {
+    .navLink {
+        width: 100px;
+        height: 35px;
+        font-size: 30px;
     }
 }
