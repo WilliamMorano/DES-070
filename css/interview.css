@@ -1,5 +1,6 @@
 :root {
     --backgroundBlue: rgb(45,49,68);
+    --backgroundBlueTransparent: rgba(45,49,68,.7);
     --boxColor: rgb(217,217,217);
 }
 
@@ -53,12 +54,12 @@ footer {
 
 #inter1 {
     position: relative;
-    left: 20%;
+    left: 30%;
 }
 
 #inter2 {
     position: relative;
-    right: 20%;
+    left: 30%;
 }
 
 nav {
@@ -72,7 +73,7 @@ nav {
     background-color: var(--backgroundBlue);
     border-bottom: var(--boxColor) 1px solid;
     z-index: 10;
-    font-family: 'Combo', cursive;
+    font-family: 'Playfair Display', serif;
 }
 
 .navLink {
@@ -101,7 +102,15 @@ nav {
     grid-template-columns: 50% 50%;
 }
 
+.grid-container3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .grid-item2 {
+    overflow-y: scroll;
+    overflow-x: hidden;
     border: 100px var(--backgroundBlue) solid;
 }
 
@@ -129,7 +138,7 @@ nav {
 
 #onePillow {
     top: 120px;
-    left: 430px;
+    left: 350px;
 }
 
 #twoPillows {
@@ -139,12 +148,12 @@ nav {
 
 #allergy {
     top: 120px;
-    left: 430px;
+    left: 350px;
 }
 
 #sky {
     top: 120px;
-    left: 430px;
+    left: 350px;
 }
 
 #karaoke {
@@ -164,12 +173,12 @@ nav {
 
 #patience {
     top: 110px;
-    left: 440px;
+    left: 350px;
 }
 
 #empathy {
     top: 120px;
-    left: 430px;
+    left: 350px;
 }
 
 a { 
@@ -199,6 +208,8 @@ a:visited {
 }
 
 #text {
+    height: 260px;
+    background-color: rgba(217, 217, 217, .7);;
     font-family: 'Combo', cursive;
     text-align: center;
     position: absolute;
