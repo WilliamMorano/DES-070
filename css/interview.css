@@ -373,37 +373,40 @@ a:visited {
 }
 
 @media (max-width: 1250px) {
-
     #onePillow {
-        top: 130%;
+        top: 80%;
         left: 70%;
     }
 
     #allergy {
-        top: 130%;
+        top: 80%;
         left: 70%;
     }
 
     #sky {
-        top: 103%;
+        top: 70%;
         left: 70%;
     }
 
     #patience {
-        top: 130%;
+        top: 80%;
         left: 70%;
     }
 
     #empathy {
-        top: 130%;
+        top: 80%;
         left: 70%;
     }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1015px) {
     .navLink {
-        width: 100px;
-        height: 35px;
-        font-size: 30px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 150px;
+        font-size: 5px;
+    }
+    .button {
+        font-size: 20px;
     }
 }
