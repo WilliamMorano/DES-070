@@ -21,50 +21,50 @@
 
 #one {
     grid-area: 1 / 1 / 2 / 6;
-    background-color: #006BA6;
+    background-color: #8895B3;
 }
 
 #two {
     grid-area: 2 / 1 / 3 / 3;
-    background-color: #D4AA7D;
+    background-color: #8E94F2;
 }
 
 #three {
     grid-area: 2 / 3 / 3 / 6;
-    background-color: #EFD09E;
+    background-color: #9FA0FF;
 }
 
 #four {
     grid-area: 3 / 1 / 4 / 5;
-    background-color: #D2D8B3;
+    background-color: #BBADFF;
 }
 
 #five {
     grid-area: 3 / 5 / 4 / 6;
-    background-color: #7C6C77;
+    background-color: #DAB6FC;
 }
 
 #six {
     grid-area: 4 / 1 / 5 / 2;
-    background-color: #D4AA7D;
+    background-color: #8E94F2;
 }
 
 #seven {
     grid-area: 4 / 2 / 5 / 4;
-    background-color: #EFD09E;
+    background-color: #9FA0FF;
 }
 
 #eight {
     grid-area: 4 / 4 / 5 / 6;
-    background-color: #D4AA7D;
+    background-color: #8E94F2;
 }
 
 #nine {
     grid-area: 5 / 1 / 6 / 6;
-    background-color: #D2D8B3;
+    background-color: #b9ffe0;
 }
 
 #ten {
     grid-area: 6 / 1 / 7 / 6;
-    background-color: #16697A;
+    background-color: #a3f0ff;
 }

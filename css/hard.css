@@ -21,22 +21,22 @@
 
 #one2 {
     grid-area: 1 / 1 / 2 / 3;
-    background-color: #E88D67;
+    background-color: #acacac;
 }
 
 #two2 {
     grid-area: 1 / 3 / 2 / 5;
-    background-color: #BB999C;
+    background-color: #d5d5d5;
 }
 
 #three2 {
     grid-area: 1 / 5 / 2 / 8;
-    background-color: #E88D67;
+    background-color: #acacac;
 }
 
 #four2 {
     grid-area: 2 / 1 / 3 / 7;
-    background-color: #9999C3;
+    background-color: #9b9bbc;
 }
 
 #five2 {
@@ -61,17 +61,17 @@
 
 #nine2 {
     grid-area: 5 / 1 / 6 / 2;
-    background-color: #E88D67;
+    background-color: #acacac;
 }
 
 #ten2 {
     grid-area: 5 / 2 / 6 / 4;
-    background-color: #BB999C;
+    background-color: #d5d5d5;
 }
 
 #eleven2 {
     grid-area: 5 / 4 / 6 / 6;
-    background-color: #E88D67;
+    background-color: #acacac;
 }
 
 #twelve2 {
