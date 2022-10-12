@@ -1,0 +1,80 @@
+div {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.morning {
+    background-image: url("../images/morning.jpg");
+}
+
+.library {
+    background-image: url("../images/library.jpg");
+}
+
+.thinker {
+    background-image: url("../images/thinker.jpeg");
+}
+
+.locker {
+    background-image: url("../images/lockerroom.jpeg");
+}
+
+.gym {
+    background-image: url("../images/gym.jpeg");
+}
+
+.info {
+    height: 50vh;
+    padding: 100px;
+    background-color: bisque;
+    font-size: 30px;
+}
+
+.intro {
+    position: sticky;
+    top: 0;
+    background-image: url("../images/space3.jpg");
+    background-color: black;
+    background-size: cover;
+    color: white;
+    font-size: 120px;
+    height: min-content;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.intro-text {
+    display: block;
+    padding-top: 100px;
+    opacity: 0;
+    width: 100%;
+    height: min-content;
+}
+
+.intro-text-disappear {
+    padding-top: 100px;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: min-content;
+}
+
+.edited-text {
+    padding-top: 100px;
+    display: none;
+    width: 100%;
+    height:min-content;
+}
