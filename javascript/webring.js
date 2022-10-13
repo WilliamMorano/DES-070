@@ -33,7 +33,6 @@ function getBreaks() {
         }
         str += element.innerHTML
     })
-    console.log(str)
     document.querySelector(".intro-text").className = "intro-text-disappear"
     editedText.innerHTML = str
     editedText.style.display = "block"
@@ -57,8 +56,11 @@ window.addEventListener("scroll", function (event) {
 })
 
 function shrinkIntro() {
-    editedText.style.fontSize = `${introSize}px`
-    introSize -= 1
+    if(introSize >= 0) {
+        editedText.style.fontSize = `${introSize}px`
+        introSize -= 1
+    }
+    
 }
 
 function growIntro() {
