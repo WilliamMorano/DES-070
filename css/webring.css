@@ -44,7 +44,7 @@ div {
 }
 
 .intro {
-    position: sticky;
+    position: fixed;
     top: 0;
     background-image: url("../images/space3.jpg");
     background-color: black;
@@ -53,7 +53,20 @@ div {
     font-size: 120px;
     height: min-content;
     min-height: 100vh;
+    width: 100%;
     z-index: 1;
+}
+
+.intro-unstick {
+    position: absolute;
+    background-image: url("../images/space3.jpg");
+    background-color: black;
+    background-size: cover;
+    color: white;
+    font-size: 120px;
+    height: min-content;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .intro-text {
@@ -77,4 +90,9 @@ div {
     display: none;
     width: 100%;
     height:min-content;
+}
+
+#scroll-tracker {
+    height: 600vh;
+    background-image: url("../images/space3.jpg");
 }
