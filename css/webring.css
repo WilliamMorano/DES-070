@@ -93,6 +93,27 @@ div {
 }
 
 #scroll-tracker {
-    height: 600vh;
+    height: 500vh;
     background-image: url("../images/space3.jpg");
+}
+
+.navbar {
+    height: 60px;
+        background: rgb(0, 0, 0);
+    
+        justify-content: right;
+        align-items: center;
+        display: flex;
+    
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        width: 100%;
+}
+
+.navs {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    font-size: 20px;
 }

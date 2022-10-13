@@ -9,6 +9,9 @@ var sticky = true
 var endHeight = 3800
 var hit = false
 
+prev = document.querySelector("#prev")
+prev.addEventListener("click", previousPage)
+
 window.onload = () => {
     getBreaks()
     window.addEventListener('resize', getBreaks);
@@ -93,4 +96,27 @@ function growIntro(newScroll, oldScroll) {
     if(introSize > 125) {
         introSize = 125
     }
+}
+
+
+
+function randomlinks(){
+    var myrandom=Math.round(Math.random()*5)
+    var links=new Array()
+    links[0]="http://www.amazon.com"
+    links[1]="http://www.apple.com"
+    links[2]="http://www.w3schools.com"
+    links[3]="http://www.youtube.com"
+    links[4]="http://www.news.com"
+    links[5]="http://www.netflix.com"
+    window.location=links[myrandom]
+}
+
+function next() {
+    window.location.href = "http://www.w3schools.com";
+}
+
+function previousPage() {
+    console.log("here")
+    window.location.href = "https://avm325.github.io/WebRingProject/";
 }
