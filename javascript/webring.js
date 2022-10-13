@@ -6,6 +6,8 @@ var introSize = 125
 var adjustRate = .005
 var first = true
 var sticky = true
+var endHeight = 3800
+var hit = false
 
 window.onload = () => {
     getBreaks()
@@ -39,7 +41,6 @@ function getBreaks() {
     editedText.innerHTML = str
     editedText.style.display = "block"
 }
-var endHeight = -1
 window.addEventListener("scroll", function (event) {
     newScroll = this.scrollY;
     if(introSize >= 0) {
@@ -52,14 +53,12 @@ window.addEventListener("scroll", function (event) {
         }
     }
     else {
-        if(endHeight === -1) {
-            endHeight = newScroll
-        }
         unstick()
-        if(newScroll <= endHeight && introSize < 0) {
+        if(newScroll <= endHeight && introSize <= 0 && !hit && newScroll-oldScroll<0) {
             introSize = 3
         }
     }
+    
     oldScroll = newScroll
 })
 
@@ -67,7 +66,7 @@ function stickyBackground() {
     if(!sticky) {
         sticky = true
         document.querySelector(".intro-unstick").className = "intro"
-        
+        hit = false
     }
 }
 
@@ -91,5 +90,7 @@ function shrinkIntro(newScroll, oldScroll) {
 function growIntro(newScroll, oldScroll) {
     editedText.style.fontSize = `${introSize}px`
     introSize += (oldScroll-newScroll)*adjustRate*6.8
-    endHeight = -1
+    if(introSize > 125) {
+        introSize = 125
+    }
 }
