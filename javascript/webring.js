@@ -12,6 +12,15 @@ var hit = false
 prev = document.querySelector("#prev")
 prev.addEventListener("click", previousPage)
 
+next = document.querySelector("#next")
+next.addEventListener("click", nextPage)
+
+rand = document.querySelector("#rand")
+rand.addEventListener("click", randomPage)
+
+home = document.querySelector("#home")
+home.addEventListener("click", homePage)
+
 window.onload = () => {
     getBreaks()
     window.addEventListener('resize', getBreaks);
@@ -98,25 +107,29 @@ function growIntro(newScroll, oldScroll) {
     }
 }
 
-
-
-function randomlinks(){
-    var myrandom=Math.round(Math.random()*5)
-    var links=new Array()
-    links[0]="http://www.amazon.com"
-    links[1]="http://www.apple.com"
-    links[2]="http://www.w3schools.com"
-    links[3]="http://www.youtube.com"
-    links[4]="http://www.news.com"
-    links[5]="http://www.netflix.com"
-    window.location=links[myrandom]
-}
-
-function next() {
-    window.location.href = "http://www.w3schools.com";
+function nextPage() {
+    window.location.href = "https://clarejachim.github.io/webring/"
 }
 
 function previousPage() {
-    console.log("here")
-    window.location.href = "https://avm325.github.io/WebRingProject/";
+    window.location.href = "https://avm325.github.io/WebRingProject/"
+}
+
+function homePage() {
+    window.location.href = "https://google.com"
+}
+
+function randomPage() {
+    var myrandom = Math.round(Math.random() * 8)
+    var links = new Array()
+    links[0] = "https://elenikary.github.io/project3_web_ring/"
+    links[1] = "https://ayc325.github.io/DES070/Project3/index.html"
+    links[2] = "https://avm325.github.io/WebRingProject/"
+    links[3] = "https://clarejachim.github.io/webring/"
+    links[4] = "http://www.cse.lehigh.edu/~haz323/WebDesign/Project%203/index.html"
+    links[5] = "https://msh223.github.io/WebRing/"
+    links[6] = "https://mlk224.github.io/WebRing/"
+    links[7] = "https://katiacarnevale.github.io/WebRing/"
+    links[8] = "https://ctcooper11.github.io/WEBRING/Web-Ring/webring.html"
+    window.location = links[myrandom]
 }
