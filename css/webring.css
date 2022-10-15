@@ -135,6 +135,8 @@ div {
     margin: 20px;
     padding: 5px;
     font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
 }
 
 #three {
@@ -152,8 +154,12 @@ div {
     color: white;
 }
 
-#flash {
-
+#fancy-next {
+    background-color: rgb(57, 57, 57);
+    color: white;
+    border: none;
+    font-size: var(--normalSize);
+    position: relative;
 }
 
 @media only screen and (max-width: 1200px) {

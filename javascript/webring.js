@@ -24,6 +24,9 @@ rand.addEventListener("click", randomPage)
 home = document.querySelector("#home")
 home.addEventListener("click", homePage)
 
+fancyNext = document.querySelector("#fancy-next")
+fancyNext.addEventListener("click", nextStyle)
+
 window.onload = () => {
     getBreaks()
     window.addEventListener('resize', getBreaks);
@@ -118,6 +121,54 @@ function growIntro(newScroll, oldScroll) {
             introSize = ogIntroSize
         }
     }
+}
+
+async function nextStyle() {
+    navBar = document.querySelector(".navbar") 
+    bigText = document.querySelector("#five")
+    container = document.querySelector(".conclusion")
+    var frames = 200
+    var navColor = 153
+    var navInc = 153/frames
+    var lightBackground = 114
+    var lightIncrement = 114/frames
+    var darkBackground = 57
+    var darkIncrement = 57/frames
+    var whiteText = 255
+    var whiteIncrement = 255/frames
+    var endHeight = 0
+    var heightIncrement = 50/frames
+    
+
+    for(var i=0; i<frames; i++) {
+        navBar.style.backgroundColor = `rgb(${navColor}, ${navColor}, ${navColor})`
+        navColor -= navInc
+
+        for(var j=0; j<4; j++) {
+            navBar.children[0].children[j].style.backgroundColor = `rgb(${whiteText}, ${whiteText}, ${whiteText})`
+        }
+
+        bigText.style.backgroundColor = `rgb(${lightBackground}, ${lightBackground}, ${lightBackground})`
+        lightBackground -= lightIncrement
+
+        bigText.style.color = `rgb(${whiteText}, ${whiteText}, ${whiteText})`
+        whiteText -= whiteIncrement
+
+        container.style.backgroundColor = `rgb(${darkBackground}, ${darkBackground}, ${darkBackground})`
+        container.children[0].style.backgroundColor = `rgb(${darkBackground}, ${darkBackground}, ${darkBackground})`
+        darkBackground -= darkIncrement
+
+        container.children[0].style.top = `${endHeight}vh`
+        endHeight -= heightIncrement
+
+        await sleep(17)
+    }
+    await sleep(500)
+    nextPage()
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function nextPage() {
