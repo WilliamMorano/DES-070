@@ -155,7 +155,7 @@ div {
 }
 
 #fancy-next {
-    background-color: rgb(57, 57, 57);
+    background-color: transparent;
     color: white;
     border: none;
     font-size: var(--normalSize);

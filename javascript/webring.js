@@ -42,9 +42,9 @@ function getBreaks() {
             document.querySelector(".intro-text-disappear").className = "intro-text"
         } 
         var elements = document.querySelectorAll(".shrinking");
-        var str = ""
         var oldOff = Number.MIN_SAFE_INTEGER
         var flag = true
+        var str = ""
         elements.forEach((element) => {
             if(element.offsetTop > oldOff && flag) {
                 flag = false
@@ -59,6 +59,9 @@ function getBreaks() {
         document.querySelector(".intro-text").className = "intro-text-disappear"
         editedText.innerHTML = str
         editedText.style.display = "block"
+    }
+    else {
+        introSize = -1
     }
 }
 
@@ -155,7 +158,6 @@ async function nextStyle() {
         whiteText -= whiteIncrement
 
         container.style.backgroundColor = `rgb(${darkBackground}, ${darkBackground}, ${darkBackground})`
-        container.children[0].style.backgroundColor = `rgb(${darkBackground}, ${darkBackground}, ${darkBackground})`
         darkBackground -= darkIncrement
 
         container.children[0].style.top = `${endHeight}vh`
