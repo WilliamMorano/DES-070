@@ -2,7 +2,10 @@ var newScroll
 var oldScroll=0
 var intro = document.querySelector(".intro")
 var editedText = document.querySelector(".edited-text")
-var introSize = 125
+
+var introSize = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--introSize').slice(0, -2))
+var ogIntroSize = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--introSize').slice(0, -2))
+
 var adjustRate = .005
 var first = true
 var sticky = true
@@ -27,35 +30,38 @@ window.onload = () => {
 }
 
 function getBreaks() {
-    if(first) {
-        first = false
+    if(this.scrollY < 3600) {
+        if(first) {
+            first = false
+        }
+        else {
+            editedText.style.display = "none"
+            document.querySelector(".intro-text-disappear").className = "intro-text"
+        } 
+        var elements = document.querySelectorAll(".shrinking");
+        var str = ""
+        var oldOff = Number.MIN_SAFE_INTEGER
+        var flag = true
+        elements.forEach((element) => {
+            if(element.offsetTop > oldOff && flag) {
+                flag = false
+                oldOff = element.offsetTop      
+            }
+            else if(element.offsetTop > oldOff){
+                str += "<br>"
+                oldOff = element.offsetTop  
+            }
+            str += element.innerHTML
+        })
+        document.querySelector(".intro-text").className = "intro-text-disappear"
+        editedText.innerHTML = str
+        editedText.style.display = "block"
     }
-    else {
-        editedText.style.display = "none"
-        document.querySelector(".intro-text-disappear").className = "intro-text"
-    } 
-    var elements = document.querySelectorAll(".shrinking");
-    var str = ""
-    var oldOff = Number.MIN_SAFE_INTEGER
-    var flag = true
-    elements.forEach((element) => {
-        if(element.offsetTop > oldOff && flag) {
-            flag = false
-            oldOff = element.offsetTop      
-        }
-        else if(element.offsetTop > oldOff){
-            str += "<br>"
-            oldOff = element.offsetTop  
-        }
-        str += element.innerHTML
-    })
-    document.querySelector(".intro-text").className = "intro-text-disappear"
-    editedText.innerHTML = str
-    editedText.style.display = "block"
 }
+
 window.addEventListener("scroll", function (event) {
-    newScroll = this.scrollY;
-    if(introSize >= 0) {
+    newScroll = this.scrollY
+    if(introSize >= 0 && newScroll < 3600) {
         stickyBackground()
         if(newScroll > oldScroll) {
             shrinkIntro(newScroll, oldScroll)
@@ -102,8 +108,15 @@ function shrinkIntro(newScroll, oldScroll) {
 function growIntro(newScroll, oldScroll) {
     editedText.style.fontSize = `${introSize}px`
     introSize += (oldScroll-newScroll)*adjustRate*6.8
-    if(introSize > 125) {
-        introSize = 125
+    if (Window.innerWidth <= 900) {
+        if (introSize > 100) {
+            introSize = 100
+        }
+    }
+    else {
+        if (introSize > ogIntroSize) {
+            introSize = ogIntroSize
+        }
     }
 }
 

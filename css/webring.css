@@ -1,3 +1,8 @@
+:root {
+    --introSize: 125px;
+    --normalSize: 30px;
+    --questionFlag: true;
+}
 div {
     height: 100vh;
     background-position: center;
@@ -17,7 +22,7 @@ div {
 }
 
 .morning {
-    background-image: url("../images/morning.jpg");
+    background-image: url("../images/morning2.jpg");
 }
 
 .library {
@@ -25,11 +30,11 @@ div {
 }
 
 .thinker {
-    background-image: url("../images/thinker.jpeg");
+    background-image: url("../images/thinking3.jpg");
 }
 
 .locker {
-    background-image: url("../images/lockerroom.jpeg");
+    background-image: url("../images/locker2.jpg");
 }
 
 .gym {
@@ -37,39 +42,49 @@ div {
 }
 
 .info {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Urbanist', sans-serif;
     height: 50vh;
     padding: 100px;
-    background-color: bisque;
-    font-size: 30px;
+    background-color: rgb(114, 114, 114);
+    font-size: var(--normalSize);
+    color: white;
 }
 
 .intro {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     position: fixed;
     top: 0;
     background-image: url("../images/space3.jpg");
     background-color: black;
     background-size: cover;
     color: white;
-    font-size: 120px;
     height: min-content;
     min-height: 100vh;
     width: 100%;
     z-index: 1;
+    font-size: var(--introSize);
 }
 
 .intro-unstick {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     position: absolute;
     background-image: url("../images/space3.jpg");
     background-color: black;
     background-size: cover;
     color: white;
-    font-size: 120px;
     height: min-content;
     min-height: 100vh;
     width: 100%;
+    font-size: var(--introSize);
 }
 
 .intro-text {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     display: block;
     padding-top: 100px;
     opacity: 0;
@@ -78,6 +93,8 @@ div {
 }
 
 .intro-text-disappear {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     padding-top: 100px;
     display: none;
     opacity: 0;
@@ -86,6 +103,8 @@ div {
 }
 
 .edited-text {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     padding-top: 100px;
     display: none;
     width: 100%;
@@ -99,20 +118,90 @@ div {
 
 .navbar {
     height: 60px;
-        background: rgb(0, 0, 0);
-    
-        justify-content: right;
-        align-items: center;
-        display: flex;
-    
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0px;
-        width: 100%;
+    background: rgb(153, 153, 153);
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    width: 100%;
 }
 
 .navs {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
     color: black;
     margin: 20px;
+    padding: 5px;
     font-size: 20px;
+}
+
+#three {
+    line-height: 60px;
+}
+
+.conclusion {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Urbanist', sans-serif;
+    height: 50vh;
+    padding: 100px;
+    background-color: rgb(57, 57, 57);
+    font-size: var(--normalSize);
+    color: white;
+}
+
+#flash {
+
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+            --introSize: 100px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #three {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    :root {
+        --introSize: 80px;
+        --normalSize: 23px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    :root {
+        --introSize: 60px;
+        --normalSize: 20px;
+    }
+    #three {
+        padding: 10px;
+    }
+    .info {
+        padding: 15px;
+    }
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --introSize: 60px;
+    }
+    #three {
+        line-height: 40px;
+    }
+    .info {
+        padding: 15px;
+    }
+    .navbar {
+        justify-content: center;
+    }
 }
