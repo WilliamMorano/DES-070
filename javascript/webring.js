@@ -182,7 +182,7 @@ function previousPage() {
 }
 
 function homePage() {
-    window.location.href = "https://google.com"
+    window.location.href = "https://teighmy22.github.io/WebRing/webring_project3/index.html"
 }
 
 function randomPage() {

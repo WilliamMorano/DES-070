@@ -41,7 +41,7 @@ div {
 }
 
 .morning {
-    background-image: url("../images/morning2.jpg");
+    background-image: url("../images/morning3.jpeg");
 }
 
 .library {
@@ -49,15 +49,16 @@ div {
 }
 
 .thinker {
-    background-image: url("../images/thinking3.jpg");
+    background-image: url("../images/thinker3.jpg");
 }
 
 .locker {
-    background-image: url("../images/locker2.jpg");
+    background-image: url("../images/locker4.jpeg");
 }
 
 .gym {
-    background-image: url("../images/gym.jpeg");
+    /* background-image: url("../images/gym3.jpeg"); */
+    background-image: url("../images/architecture-reflection-wood-gyms-light-shape-585529-wallhere.com.jpg");
 }
 
 .info {
