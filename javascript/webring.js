@@ -179,15 +179,15 @@ function sleep(ms) {
 }
 
 function nextPage() {
-    window.location.href = "https://clarejachim.github.io/webring/"
+    location.replace("https://clarejachim.github.io/webring/")
 }
 
 function previousPage() {
-    window.location.href = "https://avm325.github.io/WebRingProject/"
+    location.replace("https://avm325.github.io/WebRingProject/")
 }
 
 function homePage() {
-    window.location.href = "https://teighmy22.github.io/WebRing/webring_project3/index.html"
+    location.replace("https://teighmy22.github.io/WebRing/webring_project3/index.html")
 }
 
 function randomPage() {
@@ -202,5 +202,5 @@ function randomPage() {
     links[6] = "https://mlk224.github.io/WebRing/"
     links[7] = "https://katiacarnevale.github.io/WebRing/"
     links[8] = "https://ctcooper11.github.io/WEBRING/Web-Ring/webring.html"
-    window.location = links[myrandom]
+    location.replace(links[myrandom])
 }
