@@ -130,6 +130,7 @@ async function nextStyle() {
     navBar = document.querySelector(".navbar") 
     bigText = document.querySelector("#five")
     container = document.querySelector(".conclusion")
+    container.children[0].innerHTML = "<p class='inline' id='fancy-text'>On your mark, </p> <p class='inline' id='up'>get ready… </p> <p class='inline' id='fade'>start.</p>"
     var frames = 200
     var navColor = 153
     var navInc = 153/frames
@@ -143,6 +144,8 @@ async function nextStyle() {
     var heightIncrement = 50/frames
     var xPos = 0
     var xPosInc = 30/frames
+    var xMiddle=0
+    var xMiddleInc = 8/frames
 
     for(var i=0; i<frames; i++) {
         navBar.style.backgroundColor = `rgb(${navColor}, ${navColor}, ${navColor})`
@@ -156,17 +159,23 @@ async function nextStyle() {
         lightBackground -= lightIncrement
 
         bigText.style.color = `rgb(${whiteText}, ${whiteText}, ${whiteText})`
-        whiteText -= whiteIncrement
 
         container.style.backgroundColor = `rgb(${darkBackground}, ${darkBackground}, ${darkBackground})`
         darkBackground -= darkIncrement
 
-        container.children[0].style.top = `${endHeight}vh`
+        container.children[0].children[0].style.top = `${endHeight}vh`
         endHeight -= heightIncrement
 
-        container.children[0].style.left = `${xPos}%`
-        container.children[0].style.transform = `transform: translateX(30%)`
-        xPos-=xPosInc
+        container.children[0].children[0].style.left = `-${xPos}%`
+        xPos+=xPosInc
+
+        container.children[0].children[1].style.left = `-${xMiddle}%`
+        xMiddle+=xMiddleInc
+
+        
+        document.getElementById('fade').style.color = `rgb(${whiteText}, ${whiteText}, ${whiteText})`
+
+        whiteText -= whiteIncrement
 
         await sleep(17)
     }
