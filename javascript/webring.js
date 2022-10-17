@@ -141,7 +141,8 @@ async function nextStyle() {
     var whiteIncrement = 255/frames
     var endHeight = 0
     var heightIncrement = 50/frames
-    
+    var xPos = 0
+    var xPosInc = 30/frames
 
     for(var i=0; i<frames; i++) {
         navBar.style.backgroundColor = `rgb(${navColor}, ${navColor}, ${navColor})`
@@ -162,6 +163,10 @@ async function nextStyle() {
 
         container.children[0].style.top = `${endHeight}vh`
         endHeight -= heightIncrement
+
+        container.children[0].style.left = `${xPos}%`
+        container.children[0].style.transform = `transform: translateX(30%)`
+        xPos-=xPosInc
 
         await sleep(17)
     }

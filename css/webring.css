@@ -164,6 +164,7 @@ div {
 }
 
 .conclusion {
+    width: 100%;
     font-family: 'Abril Fatface', cursive;
     font-family: 'Crimson Text', serif;
     font-family: 'Urbanist', sans-serif;
@@ -172,6 +173,7 @@ div {
     background-color: rgb(57, 57, 57);
     font-size: var(--normalSize);
     color: white;
+    position: absolute;
 }
 
 #fancy-next {
