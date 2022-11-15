@@ -524,7 +524,7 @@ footer {
 }
 
 #harvest {
-    margin-top: 20px;
+    margin: 40px 0px;
 }
 /**------------------------------------------------------------SLIDE-END------------------------------------------------------**/
 
@@ -532,31 +532,36 @@ footer {
 /**------------------------------------------------------------GALLERY-START------------------------------------------------------**/
 
 .gallery-container {
-    width: 60%;
-    height: 40vh;
-    padding: 0px 20%;
+    width: 80%;
+    height: 80vh;
+    padding: 0px 10%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
     margin-bottom: 30px;
-}
-
-.harvest-image {
-    width:100%;
-    height: 100%;
 }
 
 #pumpkin {
     grid-area: 1 / 1 / 3 / 5;
+    background: url("../images/garden-pumkin.png") center no-repeat;
+    background-size: cover;
 }
 #plant {
     grid-area: 1 / 5 / 2 / 9;
+    background: url("../images/garden-plant.png") center no-repeat;
+    background-size: cover;
 }
 #bean {
     grid-area: 2 / 5 / 3 / 9;
+    background: url("../images/garden-bean.jpeg") center no-repeat;
+    background-size: cover;
 }
 #pea {
     grid-area: 1 / 9 / 3 / 13;
+    background: url("../images/garden-peas.jpeg") center no-repeat;
+    background-size: cover;
 }
 
 /**------------------------------------------------------------GALLERY-END------------------------------------------------------**/
