@@ -22,7 +22,6 @@ nav {
     height: 100px;
     grid-area: 1 / 1 / 2 / 5;
     padding: 10px 10px 10px 30px;
-
 }
 
 .nav-button {
@@ -56,23 +55,36 @@ nav {
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 610px) {
+    nav {
+        column-gap: 10px;
+    }
+
     .nav-button {
         font-size: 20px;
     }
     #project-button {
-        grid-area: 1 / 7 / 2 / 8;
+        grid-area: 1 / 4 / 2 / 5;
     }
 
     #learn-button {
-        grid-area: 1 / 8 / 2 / 9;
+        grid-area: 1 / 5 / 2 / 6;
     }
 
     #about-button {
-        grid-area: 1 / 9 / 2 / 10;
+        grid-area: 1 / 6 / 2 / 7;
     }
 }
-
+@media only screen and (max-width: 480px) {
+    .nav-logo {
+        width: 140px;
+        height: 80px;
+        padding: 15px 5px 5px 15px;
+    }
+    .nav-button {
+        font-size: 18px;
+    }
+}
 /**------------------------------------------------------------NAVBAR-END----------------------------------------------------------**/
 
 
@@ -106,10 +118,13 @@ nav {
 
 @media only screen and (max-width: 600px) {
     .landing-text {
-        font-size: 40px;
+        padding: 40px;
+        text-align: center;
+    }
+    .landing-section {
+        height: 50vh;
     }
 }
-
 /**------------------------------------------------------------LANDING-END----------------------------------------------------------**/
 
 
@@ -134,7 +149,6 @@ nav {
     justify-content: center;
     font-family: 'Raleway', sans-serif;
     font-size: 32px;
-
 }
 
 #top-img {
@@ -186,7 +200,77 @@ nav {
     }
 }
 @media only screen and (max-width: 760px) {
-    
+    .info-text {
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 70vh 20vh 70vh;
+        margin-top: 40px;
+    }
+
+    .img-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Raleway', sans-serif;
+        font-size: 22px;
+        max-width: 100%;
+    }
+
+    #top-img {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #split-box {
+        display: none;
+    }
+
+    #top-text {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: 0px;
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+
+    #bottom-img {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    #bottom-text {
+        grid-area: 3 / 1 / 4 / 2;
+        margin: 0px;
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .info-text {
+        grid-template-rows: 30vh 60vh 30vh 60vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #bottom-text {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    #top-text {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .info-text {
+        grid-template-rows: 40vh 60vh 40vh 60vh;
+    }
 }
 
 /**------------------------------------------------------------INTRO-END----------------------------------------------------------**/
@@ -202,6 +286,12 @@ nav {
     justify-content: center;
     background: url("../images/community_gardens.jpg") no-repeat center;
     background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .end-section {
+        height: 50vh;
+    }
 }
 
 /**------------------------------------------------------------ENDPHOTO-END----------------------------------------------------------**/
@@ -281,15 +371,65 @@ footer {
     .footer-link {
         font-size: 13px;
     }
-        .footer-logo {
-            width: 180px;
-            height: 100px;
-            padding: 30px;
-        }
+    .footer-logo {
+        width: 180px;
+        height: 100px;
+        padding: 30px;
+    }
 }
 
 @media only screen and (max-width: 760px) {
-    
+    footer {
+        display: grid;
+        background-color: #363636;
+        height: 400px;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+
+    .logo-container {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .footer-logo {
+        width: 180px;
+        height: 100px;
+        padding: 30px;
+    }
+
+    .footer-link {
+        font-family: 'Raleway';
+        color: white;
+        font-size: 13px;
+        text-decoration: none;
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    .footer-title {
+        position: relative;
+        top: -15px;
+    }
+
+    #project-footer {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    #learn-footer {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #contact-footer {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    footer {
+        column-gap: 0px;
+    }
 }
 
 
