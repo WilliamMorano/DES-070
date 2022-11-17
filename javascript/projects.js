@@ -8,7 +8,7 @@ const d = new Date()
 var startTime = d.getTime()
 
 document.addEventListener("keydown", (event) => {
-    if(!moving) {
+    if (!moving) {
         moving = true
         if (event.key === 'ArrowRight') {
             oldIndex = index
@@ -43,9 +43,9 @@ function rightArrowUpdate() {
     newSlide.style.animation = "leftSlideIn 2s linear"
     newSlide.style.animationFillMode = 'forwards'
     document.querySelector(`#${slides[oldIndex]}`).style.animation = "leftSlideOut 2s linear, delete 2s linear"
-    document.querySelector(`#${slides[oldIndex]}`).style.animationFillMode = 'forwards' 
-    setTimeout(() => { 
-        document.querySelector(`#${slides[oldIndex]}`).remove() 
+    document.querySelector(`#${slides[oldIndex]}`).style.animationFillMode = 'forwards'
+    setTimeout(() => {
+        document.querySelector(`#${slides[oldIndex]}`).remove()
         newSlide.style.top = '0'
         newSlide.style.left = '0'
         moving = false
@@ -64,9 +64,9 @@ function leftArrowUpdate() {
     newSlide.style.animation = "rightSlideIn 2s linear"
     newSlide.style.animationFillMode = 'forwards'
     document.querySelector(`#${slides[oldIndex]}`).style.animation = "rightSlideOut 2s linear, delete 2s linear"
-    document.querySelector(`#${slides[oldIndex]}`).style.animationFillMode = 'forwards' 
-    setTimeout(() => { 
-        document.querySelector(`#${slides[oldIndex]}`).remove() 
+    document.querySelector(`#${slides[oldIndex]}`).style.animationFillMode = 'forwards'
+    setTimeout(() => {
+        document.querySelector(`#${slides[oldIndex]}`).remove()
         newSlide.style.top = '0'
         newSlide.style.left = '0'
         moving = false
@@ -83,8 +83,8 @@ function updateDots() {
         child.remove()
     })
     circleContainer = document.querySelector('.circle-container')
-    for(var i=0; i<3; i++) {
-        if(circles[i] === 'green') {
+    for (var i = 0; i < 3; i++) {
+        if (circles[i] === 'green') {
             newCircle = document.createElement('div')
             newCircle.classList = 'green-circle'
             circleContainer.appendChild(newCircle)
@@ -99,7 +99,7 @@ function updateDots() {
 
 function checkSlide() {
     const d = new Date()
-    if (d.getTime() > startTime+3500) {
+    if (!moving && d.getTime() > startTime + 2500) {
         moving = true
         oldIndex = index
         if (++index > 2) {
@@ -110,10 +110,9 @@ function checkSlide() {
         updateDots()
         rightArrowUpdate()
     }
-    setTimeout(checkSlide, 3500)
+    setTimeout(checkSlide, 2500)
 }
 checkSlide()
 
 // - Navbar opacity and maybe footer
 // - logo size
-// - variety in images

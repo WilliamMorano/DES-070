@@ -456,27 +456,73 @@ footer {
 /**------------------------------------------------------------SLIDE-START------------------------------------------------------**/
 .photo-slider {
     height: 80vh;
+    overflow: hidden;
 }
 
 .slide-image {
+    position: relative;
     width: 100%;
     height: 100%;
+}
+
+@keyframes leftSlideOut {
+    100% {
+        left: -100%;
+    }
+}
+@keyframes leftSlideIn {
+    100% {
+        left: 0;
+    }
+}
+@keyframes rightSlideOut {
+    100% {
+        left: 100%;
+    }
+}
+@keyframes rightSlideIn {
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes delete {
+    100% {
+        display: none;
+    }
+}
+
+#start {
     background: url("../images/start-garden.png") no-repeat center;
     background-size: cover;
+    left: 0;
+    top: 0;
 }
 
 #middle {
-    display: none;
+    background: url("../images/mid-garden.png") no-repeat center;
+    background-size: cover;
 }
 
 #end {
-    display: none;
+    background: url("../images/garden-final.png") no-repeat center;
+    background-size: cover;
 }
 
-.circle {
+.green-circle {
     height: 20px;
     width: 20px;
     margin: 0px 5px 20px 5px;
+    background: url("../images/green-circle.png") no-repeat center;
+    background-size: cover;
+}
+
+.white-circle {
+    height: 20px;
+    width: 20px;
+    margin: 0px 5px 20px 5px;
+    background: url("../images/white-circle.png") no-repeat center;
+    background-size: cover;
 }
 
 .circle-container {
@@ -486,19 +532,8 @@ footer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-}
-
-#one {
-    background: url("../images/green-circle.png") no-repeat center;
-    background-size: cover;
-}
-#two {
-    background: url("../images/white-circle.png") no-repeat center;
-    background-size: cover;
-}
-#three {
-    background: url("../images/white-circle.png") no-repeat center;
-    background-size: cover;
+    transform: translateY(-100%);
+    z-index: 2;
 }
 
 .subject {
@@ -512,7 +547,7 @@ footer {
 }
 
 .info-paragraph {
-    padding: 40px 100px;
+    padding: 60px 10%;
     font-size: 32px;
     font-family: 'Raleway';
     margin-bottom: 10px;
@@ -529,8 +564,30 @@ footer {
 }
 
 #harvest {
-    margin: 40px 0px;
+    margin: 50px 0px;
 }
+
+@media only screen and (max-width: 650px) {
+    .info-paragraph {
+        font-size: 25px;
+    }
+    .photo-slider {
+        height: 50vh;
+    }
+    .subject {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .info-paragraph {
+        font-size: 20px;
+    }
+    .subject {
+        font-size: 25px;
+    }
+}
+
 /**------------------------------------------------------------SLIDE-END------------------------------------------------------**/
 
 
@@ -539,7 +596,7 @@ footer {
 .gallery-container {
     width: 80%;
     height: 80vh;
-    padding: 0px 10%;
+    padding: 0px 10% 50px 10%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -560,7 +617,7 @@ footer {
 }
 #bean {
     grid-area: 2 / 5 / 3 / 9;
-    background: url("../images/garden-bean.jpeg") center no-repeat;
+    background: url("../images/garden-beans.webp") center no-repeat;
     background-size: cover;
 }
 #pea {
@@ -569,9 +626,42 @@ footer {
     background-size: cover;
 }
 
+@media only screen and (max-width: 900px) {
+    .harvest-image {
+        margin: 10% 0;
+        width: 100%;
+        height: 900px;
+    }
+    .gallery-container {
+        display: block;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .harvest-image {
+        height: 600px;
+    }
+}
+
 /**------------------------------------------------------------GALLERY-END------------------------------------------------------**/
 
 
 /**------------------------------------------------------------------------------------------------------------------------------**/
 /**------------------------------------------------------------PROJECTS-END----------------------------------------------------**/
+/**------------------------------------------------------------------------------------------------------------------------------**/
+
+
+
+/**------------------------------------------------------------------------------------------------------------------------------**/
+/**------------------------------------------------------------LEARN-START----------------------------------------------------**/
+/**------------------------------------------------------------------------------------------------------------------------------**/
+
+/**------------------------------------------------------------GALLERY-START------------------------------------------------------**/
+
+/**------------------------------------------------------------GALLERY-END------------------------------------------------------**/
+
+
+/**------------------------------------------------------------------------------------------------------------------------------**/
+/**------------------------------------------------------------LEARN-END----------------------------------------------------**/
 /**------------------------------------------------------------------------------------------------------------------------------**/
