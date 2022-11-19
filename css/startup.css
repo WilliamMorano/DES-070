@@ -76,7 +76,7 @@ nav {
         padding: 20px 10px 10px 10px;
     }
     nav {
-        column-gap: 10px;
+        column-gap: 20px;
     }
 
     .nav-button {
@@ -850,32 +850,74 @@ footer {
 /**------------------------------------------------------------TEAM-START------------------------------------------------------**/
 .team-gallery {
     display: grid;
-    width: 90%;
-    height: 100vh;
-    padding: 3% 3%;
+    max-width: 80%;
+    margin: 0;
+    height: fit-content;
+    padding: 5% 10%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    grid-template-rows: repeat(2, 600px);
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.card {
+    display: flexbox;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+}
+
+.gardener {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    font-size: 35px;
+    color: white;
+    position: relative;
+    top: -1100px;
+    text-align: center;
+    z-index: 3;
+}
+
+.bio {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -850px;
+    padding: 10%;
+    z-index: 3;
+}
+
+.blur {
+    position: relative;
+    top: -604px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .4);
+    z-index: 2;
+}
+
+.hover-block {
+    display: none;
+    width: 100%;
+    height: 100%;
 }
 
 #first-card {
     grid-area: 1 / 1 / 2 / 2;
-    background: url('../images/person1.jpeg') center no-repeat;
-    background-size: cover;
 }
 #second-card {
     grid-area: 1 / 2 / 2 / 3;
-    background: url('../images/person1.jpeg') center no-repeat;
-    background-size: cover;
 }
 #third-card {
     grid-area: 1 / 3 / 2 / 4;
 }
 #fourth-card {
     grid-area: 2 / 1 / 3 / 2;
-    background: url('../images/person1.jpeg') center no-repeat;
-    background-size: cover;
 }
 #fifth-card {
     grid-area: 2 / 2 / 3 / 3;
@@ -883,7 +925,179 @@ footer {
 #sixth-card {
     grid-area: 2 / 3 / 3 / 4;
 }
+
+@media only screen and (max-width: 1500px) {
+    .team-gallery {
+        grid-template-rows: repeat(2, 500px);
+    }
+    .name {
+        top: -900px;
+    }
+
+    .bio {
+        top: -780px;
+    }
+
+    .blur {
+        top: -504px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .team-gallery {
+        grid-template-rows: repeat(2, 400px);
+    }
+    .name {
+        top: -730px;
+        font-size: 30px;
+    }
+
+    .bio {
+        top: -665px;
+    }
+
+    .blur {
+        top: -404px;
+    }
+    .bio {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .team-gallery {
+        grid-template-rows: repeat(2, 300px);
+    }
+    .name {
+        top: -560px;
+    }
+
+    .bio {
+        top: -500px;
+    }
+
+    .blur {
+        top: -304px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .team-gallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 700px);
+    }
+    #first-card {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #second-card {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #third-card {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #fourth-card {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    #fifth-card {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    #sixth-card {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+
+    .name {
+        top: -1300px;
+        font-size: 40px;
+    }
+    .bio {
+        top: -1100px;
+        font-size: 30px;
+    }
+
+    .blur {
+        top: -704px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .team-gallery {
+        grid-template-rows: repeat(6, 500px);
+    }
+}
 /**------------------------------------------------------------TEAM-END------------------------------------------------------**/
+
+/**------------------------------------------------------------FORM-START------------------------------------------------------**/
+form {
+    width: 40%;
+    padding: 10px 30%;
+    height: 60vh;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 30px;
+}
+
+.join {
+    width: 100%;
+    color: black;
+    font-size: 40px;
+    font-family: 'Work Sans';
+    text-align: center;
+    padding-top: 50px;
+}
+
+label {
+    font-size: 30px;
+    font-family: 'Work Sans';
+}
+
+.label-container {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(1, 1, 1, .2);
+    border: none;
+    border-radius: 15px;
+    font-size: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button {
+    width: 250px;
+    height: 70px;
+    background-color: #363636;
+    border: none;
+    border-radius: 15px;
+    color: #82FD87;
+    font-size: 40px;
+    font-family: 'Work Sans';
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45px;
+}
+
+button:hover {
+    color: #363636;
+    background-color: #82FD87;
+}
+/**------------------------------------------------------------FORM-END------------------------------------------------------**/
 
 
 /**------------------------------------------------------------------------------------------------------------------------------**/
