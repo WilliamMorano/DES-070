@@ -104,6 +104,13 @@ nav {
         font-size: 18px;
     }
 }
+@media only screen and (max-width: 480px) {
+    .nav-button {
+        position: relative;
+        left: -50px;
+        
+    }
+}
 /**------------------------------------------------------------NAVBAR-END----------------------------------------------------------**/
 
 
@@ -829,20 +836,26 @@ footer {
     text-align: center;
 }
 
+@media only screen and (max-width: 1200px) {
+    .first-section {
+        height: 60vh;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .first-section {
+        height: 50vh;
+    }
+}
+
 @media only screen and (max-width: 830px) {
-    .gardeners-text {
-        font-size: 50px;
+    .first-section {
+        height: 40vh;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .gardeners-text {
-        padding: 40px;
-        text-align: center;
-    }
-
-    .gardeners {
-        height: 50vh;
+    .first-section {
+        height: 30vh;
     }
 }
 /**------------------------------------------------------------TOP-END------------------------------------------------------**/
@@ -1032,18 +1045,35 @@ footer {
     .team-gallery {
         grid-template-rows: repeat(6, 500px);
     }
+    .name {
+        top: -900px;
+        font-size: 30px;
+    }
+
+    .bio {
+        top: -750px;
+        font-size: 20px;
+    }
+
+    .blur {
+        top: -504px;
+    }
 }
 /**------------------------------------------------------------TEAM-END------------------------------------------------------**/
 
 /**------------------------------------------------------------FORM-START------------------------------------------------------**/
 form {
-    width: 40%;
-    padding: 10px 30%;
-    height: 60vh;
+    width: 50%;
+    padding: 10px 25%;
+    height: fit-content;
     display: flex;
     flex-flow: column;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
+
+.form-container {
+    width: 100%;
+}   
 
 .join {
     width: 100%;
@@ -1068,7 +1098,7 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 96%;
     height: 60px;
     background-color: rgba(1, 1, 1, .2);
     border: none;
@@ -1096,6 +1126,19 @@ button {
 button:hover {
     color: #363636;
     background-color: #82FD87;
+}
+
+@media only screen and (max-width: 1100px) {
+    form {
+        width: 60%;
+        padding: 10px 20%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    form {
+        width: 80%;
+        padding: 10px 10%;
+    }
 }
 /**------------------------------------------------------------FORM-END------------------------------------------------------**/
 

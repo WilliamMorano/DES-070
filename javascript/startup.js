@@ -113,7 +113,3 @@ function checkSlide() {
     setTimeout(checkSlide, 3500)
 }
 checkSlide()
-
-// - Navbar opacity and maybe footer
-// - logo size
-// - variety in images
