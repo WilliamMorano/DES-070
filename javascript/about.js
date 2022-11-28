@@ -12,3 +12,16 @@ cards.forEach((card, index) => {
         infoSections[index].style.display = 'none'
     })
 })
+
+var form = document.querySelector('form')
+var box = document.querySelector('.sticky')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    var name = e.target.querySelector('#fname').value
+    box.innerText = name ? `Thanks ${name}, for the submission!` : `Thanks!, for the submission!`
+    box.style.display = 'block'
+    setTimeout(() => {
+        box.remove()
+    }, 1000)
+});
