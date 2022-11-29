@@ -166,10 +166,6 @@ nav {
     grid-template-rows: 1fr 10px 1fr;
 }
 
-.img-container {
-
-}
-
 .text {
     display: flex;
     align-items: center;
