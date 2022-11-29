@@ -24,7 +24,11 @@ form.addEventListener('submit', (e) => {
     box.style.fontSize = '32px'
     box.style.display = 'block'
     box.style.padding = '10px'
+    e.target.querySelector('#fname').value = ''
+    e.target.querySelector('#lname').value = ''
+    e.target.querySelector('#email').value = ''
+    e.target.querySelector('#number').value = ''
     setTimeout(() => {
         box.remove()
-    }, 1000)
+    }, 1500)
 });
