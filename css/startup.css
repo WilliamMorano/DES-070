@@ -566,7 +566,8 @@ footer {
 }
 
 #backyard {
-    margin-top: 20px;
+    padding-top: 20px;
+    background-color: ghostwhite;
 }
 
 .info-paragraph {
@@ -574,6 +575,7 @@ footer {
     font-size: 32px;
     font-family: 'Raleway';
     margin-bottom: 10px;
+    background-color: ghostwhite;
 }
 
 #split {
