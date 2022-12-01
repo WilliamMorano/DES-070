@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .9fr max-content 1fr;
+}
+
+.fly-text {
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+    font-family: 'Bangers';
+    color: #82FD87;
+    font-size: 150px;
+    -webkit-text-stroke: 2px black;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    animation-fill-mode: forwards;
+}
+
+#urban-text {
+    transform: translateX(-110%) translateY(-50%);
+}
+#scapers-text {
+    transform: translateX(-110%) translateY(50%);
+}
+
+.city-background {
+    grid-area: 2 / 1 / 3 / 2;
+    max-width: 100%;
+    height: auto;
+}
+
+.top-background {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #21cdf5;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-background {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: #ffd6ac;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes zoomIn {
+    35% {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    65% {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    100% {
+        left: 100%;
+        transform: translateX(100%) translateY(-50%);
+    }
+}
+@keyframes zoomInScaper {
+    35% {
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+    }
+    65% {
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+    }
+    100% {
+        left: 100%;
+        transform: translateX(100%) translateY(50%);
+    }
+}
