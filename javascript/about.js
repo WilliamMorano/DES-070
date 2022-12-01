@@ -19,7 +19,7 @@ var box = document.querySelector('.sticky')
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     var name = e.target.querySelector('#fname').value
-    box.innerText = name ? `Thanks ${name}, for the submission!` : `Thanks!, for the submission!`
+    box.innerText = name ? `Thanks ${name}, for the submission!` : `Thanks, for the submission!`
     box.style.fontFamily = 'Raleway'
     box.style.fontSize = '32px'
     box.style.display = 'block'

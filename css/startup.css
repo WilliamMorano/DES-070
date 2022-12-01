@@ -119,13 +119,6 @@ nav {
         font-size: 18px;
     }
 }
-@media only screen and (max-width: 480px) {
-    .nav-button {
-        position: relative;
-        left: -50px;
-        
-    }
-}
 /**------------------------------------------------------------NAVBAR-END----------------------------------------------------------**/
 
 
@@ -150,6 +143,7 @@ nav {
     top: -12%;
     -webkit-text-stroke: 2px black;
     padding: 40px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 830px) {
@@ -223,17 +217,17 @@ nav {
 
 @media only screen and (max-width: 1260px) {
     .text {
-        font-size: 29px;
+        font-size: 25px;
     }
 }
 @media only screen and (max-width: 1030px) {
     .text {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 @media only screen and (max-width: 830px) {
     .text {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 @media only screen and (max-width: 760px) {
@@ -242,13 +236,7 @@ nav {
         height: fit-content;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20vh 70vh 20vh 70vh;
-        margin-top: 40px;
-    }
-
-    .img-container {
-        padding-left: 40px;
-        padding-right: 40px;
+        grid-template-rows: 400px 70vh 400px 70vh;
     }
 
     .text {
@@ -258,6 +246,7 @@ nav {
         font-family: 'Raleway', sans-serif;
         font-size: 22px;
         max-width: 100%;
+        background-color: whitesmoke;
     }
 
     #top-img {
@@ -270,9 +259,7 @@ nav {
 
     #top-text {
         grid-area: 1 / 1 / 2 / 2;
-        margin: 0px;
-        padding-right: 80px;
-        padding-left: 80px;
+        padding: 20px 80px;
     }
 
     #bottom-img {
@@ -289,7 +276,7 @@ nav {
 
 @media only screen and (max-width: 650px) {
     .info-text {
-        grid-template-rows: 30vh 60vh 30vh 60vh;
+        grid-template-rows: 400px 60vh 400px 60vh;
     }
 }
 
@@ -302,11 +289,14 @@ nav {
         padding-right: 40px;
         padding-left: 40px;
     }
+    .text {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .info-text {
-        grid-template-rows: 40vh 60vh 40vh 60vh;
+        grid-template-rows: 300px 60vh 300px 60vh;
     }
 }
 
@@ -672,15 +662,15 @@ footer {
 
 @media only screen and (max-width: 1200px) {
     .gallery-container {
-        height: 40vh;
+        height: 50vh;
     }
 }
 
 @media only screen and (max-width: 900px) {
     .harvest-image {
-        margin: 10% 0;
-        width: 100%;
-        height: 900px;
+        margin: 10% 5%;
+        width: 90%;
+        height: 600px;
     }
     .gallery-container {
         display: block;
@@ -688,11 +678,6 @@ footer {
     }
 }
 
-@media only screen and (max-width: 650px) {
-    .harvest-image {
-        height: 600px;
-    }
-}
 
 /**------------------------------------------------------------GALLERY-END------------------------------------------------------**/
 
@@ -892,37 +877,34 @@ footer {
         height: 40vh;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .first-section {
-        height: 30vh;
-    }
-}
 /**------------------------------------------------------------TOP-END------------------------------------------------------**/
 
 /**------------------------------------------------------------TEAM-START------------------------------------------------------**/
 .team-gallery {
     display: grid;
-    max-width: 80%;
+    width: 80%;
     margin: 0;
     height: fit-content;
-    padding: 5% 10%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 600px);
     row-gap: 50px;
     column-gap: 50px;
+    padding: 5% 10%;
 }
 
 .card {
     display: flexbox;
+    justify-self: center;
     vertical-align: middle;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 370px;
+    height: 600px;
 }
 
 .gardener {
-    position: relative;
-    top: 0px;
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -930,8 +912,10 @@ footer {
 .name {
     font-size: 35px;
     color: white;
-    position: relative;
-    top: -1100px;
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     z-index: 3;
     font-family: 'Work Sans';
@@ -940,16 +924,15 @@ footer {
 .bio {
     font-size: 20px;
     color: white;
-    position: relative;
-    top: -850px;
+    position: absolute;
     padding: 10%;
+    top: 300px;
     z-index: 3;
     font-family: 'Raleway';
 }
 
 .blur {
-    position: relative;
-    top: -604px;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(1, 1, 1, .4);
@@ -985,16 +968,35 @@ footer {
     .team-gallery {
         grid-template-rows: repeat(2, 500px);
     }
+    .card {
+        width: 310px;
+        height: 500px;
+    }
     .name {
-        top: -900px;
+        top: 120px;
     }
 
     .bio {
-        top: -780px;
+        top: 200px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .team-gallery {
+        grid-template-rows: repeat(2, 450px);
+    }
+    .card {
+        width: 280px;
+        height: 450px;
+    }
+    .name {
+        top: 90px;
+        font-size: 28px;
     }
 
-    .blur {
-        top: -504px;
+    .bio {
+        top: 170px;
+        font-size: 18px;
     }
 }
 
@@ -1003,20 +1005,16 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 600px);
     }
+    .card {
+        width: 370px;
+        height: 600px;
+    }
     .name {
-        top: -1070px;
-        font-size: 30px;
+        top: 130px;;
     }
 
     .bio {
-        top: -865px;
-    }
-
-    .blur {
-        top: -604px;
-    }
-    .bio {
-        font-size: 17px;
+        top: 300px;
     }
     #first-card {
         grid-area: 1 / 1 / 2 / 2;
@@ -1047,28 +1045,35 @@ footer {
     .team-gallery {
         grid-template-rows: repeat(3, 500px);
     }
+    .card {
+        width: 310px;
+        height: 500px;
+    }
     .name {
-        top: -900px;
+        top: 120px;
     }
 
     .bio {
-        top: -700px;
-    }
-
-    .blur {
-        top: -504px;
-    }
-
-    .bio {
-        font-size: 14px;
+        top: 200px;
     }
 }
 
 @media only screen and (max-width: 850px) {
     .team-gallery {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 700px);
+        grid-template-rows: repeat(6, 600px);
     }
+    .card {
+        width: 370px;
+        height: 600px;
+    }
+    .name {
+        top: 130px;
+    }
+    .bio {
+        top: 300px;
+    }
+
     #first-card {
         grid-area: 1 / 1 / 2 / 2;
     }
@@ -1092,37 +1097,22 @@ footer {
     #sixth-card {
         grid-area: 6 / 1 / 7 / 2;
     }
-
-    .name {
-        top: -1300px;
-        font-size: 40px;
-    }
-    .bio {
-        top: -1100px;
-        font-size: 30px;
-    }
-
-    .blur {
-        top: -704px;
-    }
 }
 
 @media only screen and (max-width: 550px) {
     .team-gallery {
         grid-template-rows: repeat(6, 500px);
     }
+    .card {
+        width: 310px;
+        height: 500px;
+    }
     .name {
-        top: -900px;
-        font-size: 30px;
+        top: 120px;
     }
 
     .bio {
-        top: -750px;
-        font-size: 20px;
-    }
-
-    .blur {
-        top: -504px;
+        top: 200px;
     }
 }
 /**------------------------------------------------------------TEAM-END------------------------------------------------------**/
