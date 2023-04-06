@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Ghost Hunter" startnode="1" creator="Twine" creator-version="2.6.1" format="SugarCube" format-version="2.36.1" ifid="C6A1550C-899A-403B-A6C4-234975F86A68" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<tw-storydata name="Ghost Hunter" startnode="9" creator="Twine" creator-version="2.6.1" format="SugarCube" format-version="2.36.1" ifid="C6A1550C-899A-403B-A6C4-234975F86A68" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 button {
   background-color: #EAAA05;
   color: black;
@@ -359,6 +359,7 @@ height: 100vh;
 .photo-move-9 {
   display: flex;
   height: 500px;
+  justify-items: center;
 }
 
 .photo-9 {
@@ -369,6 +370,9 @@ height: 100vh;
   height: 500px;
   position: relative;
   left: 30%;
+  animation: pictureFall 5s;
+   animation-fill-mode: forwards; 
+
 }
 
 .low-content-9 {
@@ -388,6 +392,7 @@ height: 100vh;
   height: 65px;
   display: flex;
   align-self: center;
+  justify-self: center;
 }
 
 .text-9 {
@@ -395,6 +400,22 @@ height: 100vh;
   color: black;
   font-size: 24px;
   width: 100%;
+}
+
+@keyframes pictureFall{
+	0% {
+      left: 30%;
+  }
+  10% {
+    rotate: 20deg;
+  }
+  20% {
+    rotate: -20deg;
+    top: 0;
+  }
+  100% {
+  	top:300vh;
+  }
 }
 
 body[data-tags= "8"] {
@@ -748,6 +769,14 @@ grid-area: 4 / 2 / 5 / 3;
 &lt;/div&gt;
 
 &lt;/div&gt;
+
+&lt;script&gt;
+const timeoutId = setTimeout(function(){
+    document.getElementsByClassName(&#39;photo-9&#39;)[&#39;0&#39;].style.display = &#39;none&#39;;
+    document.getElementsByClassName(&#39;photo-move-9&#39;)[&#39;0&#39;].style.justifyContent = &#39;center&#39;;
+    document.getElementsByClassName(&#39;photo-text-9&#39;)[&#39;0&#39;].style.transform = &#39;translateX(-17px)&#39;
+}, 2000);
+&lt;/script&gt;
 </tw-passagedata><tw-passagedata pid="10" name="10" tags="10" position="925,425" size="100,100">&lt;div class=&#39;parent-10&#39;&gt;
 &lt;div class=&#39;bottom-10&#39;&gt;Sad, just dino nuggets.&lt;/div&gt;
 &lt;div class=&#39;btn-10&#39;&gt; &lt;&lt;button &quot;Go back&quot; &#39;6&#39;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
