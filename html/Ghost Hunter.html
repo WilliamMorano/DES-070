@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Ghost Hunter" startnode="1" creator="Twine" creator-version="2.6.1" format="SugarCube" format-version="2.36.1" ifid="C6A1550C-899A-403B-A6C4-234975F86A68" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+	<tw-storydata name="Ghost Hunter" startnode="10" creator="Twine" creator-version="2.6.1" format="SugarCube" format-version="2.36.1" ifid="C6A1550C-899A-403B-A6C4-234975F86A68" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 button {
@@ -402,13 +402,13 @@ height: 100vh;
   font-size: 24px;
   position: relative;
   top: 75vh;
-  left: 900px;
+  left: 650px;
 }
 
 .btn-10 {
   position: relative;
   top: 75vh;
-  left: 950px;
+  left: 739px;
 }
 
 body[data-tags= "9"] {
@@ -528,6 +528,20 @@ body[data-tags= "11"] {
 .bot-btn-11 {
   position: relative;
   left: 95px
+}
+
+@media screen and (max-width: 1380px) {
+  .parent-11 {
+    left: 450px;
+ }
+  .top-btn-11 {
+
+  left: 40px;
+}
+
+.bot-btn-11 {
+  left: 40px
+}
 }
 
 body[data-tags= "13"] {
@@ -680,6 +694,13 @@ background: url(https://williammorano.github.io/DES-070/images/doll.png) center 
   animation-iteration-count: infinite;
 }
 
+@media screen and (max-width: 1460px) {
+  .content-16 {
+  	left: -180px;
+    grid-template-columns: 400px 400px 400px;
+  }
+}
+
 @keyframes bootsSlide {
   	0% {
       top: 0%;
@@ -711,6 +732,35 @@ body[data-tags= "15"] {
  grid-area: 1 / 1 / 2 / 3;
   text-align: center;
   font-size: 40px;
+}
+
+@media screen and (max-width: 1600px) {
+  .content-15 {
+    left: -270px;
+    grid-template-columns: 220px 220px;
+  }
+  .text1-15 {
+    font-size: 30px;
+   }
+ 
+  .text2-15 {
+    font-size: 28px;
+  }
+
+  .text3-15 {
+    font-size: 24px;
+  }
+
+  .text4-15 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .content-15 {
+  	left: -200px;
+    grid-template-columns: 200px 200px;
+  }
 }
 
 .dots {
@@ -758,6 +808,9 @@ grid-area: 4 / 2 / 5 / 3;
   align-self: start;
   justify-self: center;
  grid-area: 5 / 1 / 6 / 3;
+  position: relative;
+  top: -120px;
+  left: -140px;
 }
 
 .text-17 {
@@ -949,6 +1002,11 @@ body[data-tags= "18"] {
 	background-repeat: no-repeat;
 }
 
+.parent-18 {
+  position: relative;
+  top: -100px;
+}
+
 .btn-div-18-1 {
 position: relative;
   top: 220px;
@@ -959,6 +1017,28 @@ position: relative;
  position: relative;
   top: 240px;
   left: 400px;
+}
+
+.box-18 {
+  background:url(https://williammorano.github.io/DES-070/images/cardboardbox.png) center no-repeat;
+  background-size: cover;
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: -170px;
+  left: -110px;
+}
+
+.chest-18 {
+background: url(https://williammorano.github.io/DES-070/images/chest.png) center no-repeat;
+  background-size: cover;
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  top: -170px;
+  left: -90px;
 }
 
 body[data-tags= "22"] {
@@ -972,7 +1052,7 @@ body[data-tags= "22"] {
   font-size: 24px;
   text-align: center;
   position: relative;
-  left: -500px;
+  left: -400px;
   top: 100px;
 }
 
@@ -981,7 +1061,7 @@ body[data-tags= "22"] {
   font-size: 24px;
   text-align: center;
   position: relative;
-  left: -250px;
+  left: -150px;
   top: 140px;
   width: 354px;
 }
@@ -993,7 +1073,7 @@ body[data-tags= "22"] {
   text-align: center;
   position: relative;
   width: fit-content;
-  left: -320px;
+  left: -180px;
   top: 200px;
 }
 
@@ -1004,7 +1084,7 @@ body[data-tags= "22"] {
   text-align: center;
   position: relative;
   width: fit-content;
-  left: -208px;
+  left: -68px;
   top: 184px;
 }
 
@@ -1012,7 +1092,7 @@ body[data-tags= "22"] {
   opacity: 0;
  position: relative;
   top: 78px;
-  left: -110px;
+  left: 30px;
 }
 
 .chest-22 {
@@ -1127,7 +1207,7 @@ position: relative;
   font-size: 24px;
   color: white;
   top: -110px;
-  left: -375px;
+  left: -235px;
   text-align: center;
   width: 425px;
   opacity: 0;
@@ -1160,7 +1240,7 @@ position: relative;
 .btn-div-21 {
   position: relative;
   top: -350px;
-  left: 660px;
+  left: 500px;
   opacity: 0;
 }
 
@@ -1172,7 +1252,7 @@ position: relative;
   height: 300px;
   position: relative;
   top: -1500px;
-  left: 880px;
+  left: 650px;
   opacity: 0;
   animation: bob 5s infinite;
 }
@@ -1203,7 +1283,7 @@ body[data-tags= "24"] {
   font-size: 24px;
   position: relative;
    top: 300px;
-    left: 776px;
+    left: 623px;
     width: 409px;
     text-align: center;
 }
@@ -1223,7 +1303,7 @@ body[data-tags= "24"] {
 .btn-div-24 {
 	position: relative;
   top: 260px;
-  left: 900px;
+  left: 720px;
 }
 
 .ghost-24 {
@@ -1441,7 +1521,8 @@ Wait, what is that?
     	&lt;&lt;button &quot;that cardboard box looks funky...&quot; &quot;21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
  &lt;div class=&#39;btn-div18-2&#39;&gt;
   		&lt;&lt;button &quot;is that a creepy wooden chest?&quot; &#39;22&#39;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
-   
+   &lt;div class=&#39;box-18&#39;&gt;&lt;/div&gt;
+   &lt;div class=&#39;chest-18&#39;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 
